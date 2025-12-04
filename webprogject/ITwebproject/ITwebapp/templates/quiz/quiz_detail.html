@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Project</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static '/css/nav.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static '/css/text.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static '/css/layout.css' %}">
+    </head>
+  <body>
+    <h2>{{ quiz.title }}</h2>
+    <div class="d-flex justify-content-center">
+
+      <div class="card text-bg-light mb-3" style="width: 28rem;">
+
+        <div class="card-header text-bg-success ">Question {{ q_index|add:1 }} of {{ total }}</div>
+        <div class="card-body">
+          <h3 class="card-title text-center">{{ question.text }}</h5>
+          <div class="d-grid gap-2">
+            {% for answer in question.answers.all %}
+                <a href="{% url 'answer_question' quiz.id q_index answer.id %} " class="btn btn-primary w-100">
+                  {{ answer.text }}
+                </a>
+            {% endfor %}
+            </div>
+
+        </div>
+    </div>
+    </ul><script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

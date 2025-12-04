@@ -1,0 +1,21 @@
+.intro-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10%;
+	margin-bottom: 20%;
+}
+
+.it-container {
+	display: flex;
+	flex-direction: column;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-top: 10%;
+	background-color: rgb(140, 140, 140);
+}
+.quiz-container {
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}

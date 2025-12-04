@@ -1,0 +1,35 @@
+body {
+    font-family: Arial;
+    font-size: small;
+    background: linear-gradient(to left, lightblue, lightgreen);
+}
+
+
+.Page-container {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.Card {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+.Img {
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgb(159, 159, 159);
+    transition: 1s;
+}
+img {
+    border-radius: 20px;
+    transition: 1s;
+}
+img:hover {
+    border-radius: 20px;
+    height: 500px;
+    width: 500px;
+    margin-left: 200px;
+}

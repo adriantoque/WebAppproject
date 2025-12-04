@@ -1,0 +1,42 @@
+.Nav-container {
+    display: flex;
+    position: fixed;
+    border: 2px solid white;
+    justify-content: center;
+    top: 2px;
+    left: 30%;
+    right: 30%;
+    z-index: 1000;
+}
+.Nav-wrapper {
+    display: flex;
+    border: 2px solid black;
+    padding: 10px;
+    background-color: aquamarine;
+}
+
+.Nav-link {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: large;
+    text-decoration: none;
+    width: 80px;
+    
+    color: rgb(255, 255, 255);
+    text-align: center;
+    transition: 800ms;
+}
+
+.Nav-link:hover {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 50px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.Nav-link.active {
+    background: rgba(255,255,255,0.3);
+    font-weight: bold;
+    border-radius: 6px;
+}

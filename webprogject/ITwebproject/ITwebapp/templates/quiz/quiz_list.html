@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+      
+<h1 class="text-center">All Quizzes</h1>
+<div class="d-flex justify-content-center">
+  <div style="grid-template-columns: 1fr" class="d-grid gap-3">
+  {% for quiz in quizzes %}
+    <div class=" p-2 card text-bg-light mb-3" style="width: 18rem;">
+      <h5 class="text-center card-title">{{ quiz.title}}</h5>
+      <p class="text-center card-text">Score: {{quiz.score_display}}</p>
+      <a href="{% url 'quiz_detail' quiz.id 0 %}" class="btn btn-primary"> Take</a>
+    </div>
+  {% endfor %}
+  </div>
+</div>
+{% endblock %}
