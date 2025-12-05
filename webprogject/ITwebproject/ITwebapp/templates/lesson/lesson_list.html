@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<h2 class="text-center my-5">Lesson list </h2>
+    {% for l in lessons %}
+    
+    <div class="card ms-3 me-3">
+        <div class="card-body">
+            {{ l.title }}
+            <a href="{% url 'lesson_view' l.id  %}" class="btn btn-primary"> view</a>
+    </div>
+    </div>
+    {% endfor %}
+
+
+{% endblock %}

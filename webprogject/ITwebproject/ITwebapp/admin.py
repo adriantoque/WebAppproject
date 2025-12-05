@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django import forms
 from django.forms.models import BaseInlineFormSet
-from .models import Quiz, Question, Answer
+from .models import Quiz, Question, Answer, Lesson, LessonContent
 
 
 # Register your models here.
@@ -14,6 +14,10 @@ class AnswerInline(admin.TabularInline):
 
 class QuestionInline(admin.TabularInline):
     model = Question
+    extra = 1
+
+class LessonInline(admin.TabularInline):
+    model = LessonContent
     extra = 1
 
 
@@ -34,3 +38,11 @@ class AnswerAdmin(admin.ModelAdmin):
     list_display = ("text", "question", "is_correct")
     list_filter = ("is_correct",)
 
+@admin.register(Lesson)
+class LessonAdmin(admin.ModelAdmin):
+    list_display = ("title",)
+    inlines = [LessonInline]
+
+@admin.register(LessonContent)
+class LessonContentAdmin(admin.ModelAdmin):
+    list_display = ("content", "lesson")

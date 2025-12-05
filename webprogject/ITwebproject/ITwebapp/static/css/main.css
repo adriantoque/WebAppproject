@@ -6,42 +6,8 @@ body {
 
 }
 
-
-/*##########################################################*/
-
-.Main-content {
-    padding: 100px;
-    height: 100vh;
-
-}
-.Profile {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.Img-content {
-    height: 500px;
-    width: 500px;
-    border-radius: 500px;
-    box-shadow: 0 8px 20px rgb(159, 159, 159);
-    transition: 1s;
-}
-.Profile-info {
-    padding: 50px;
-    font-family: Helvetica;
-    
-}
-.Text {
-    font-size: medium;
-    font-weight: bold;
-    font-family: Helvetica;
-}
-.Name-content {
-    padding-bottom: 50px;
+.Title {
     font-size: 100px;
-    font-weight: bold;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
-
-

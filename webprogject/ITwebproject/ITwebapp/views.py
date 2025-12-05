@@ -1,10 +1,17 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Quiz, Question, Answer
+from .models import Quiz, Question, Answer, Lesson
 
 # Create your views here.
 def home(request):
     return render(request, 'home.html')
 
+def lesson_list(request):
+    lessons = Lesson.objects.all()
+    return render(request, "lesson/lesson_list.html", {"lessons": lessons})
+
+def lesson_view(request, lesson_id):
+    lesson = get_object_or_404(Lesson, id=lesson_id)
+    return render(request, "lesson/lesson_view.html", {"lessons": lesson})
 
 def profile(request):
     return render(request, 'profile.html')
